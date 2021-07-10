@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pokedo.id</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        p {
+            text-align: justify;
+            font-family: "Poppins", sans-serif;
+            font-size: 15pt;
+        }
+        
+        h3 {
+            font-family: "Poppins", sans-serif;
+            font-size: 20pt;
+        }
+        
+        .nav-bar {
+            width: 100%;
+            height: 70px;
+            background: #0e0d0d;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 75px;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: "comfortaa", sans-serif;
+            color: #fff;
+        }
+        
+        .nav-bar ul {
+            display: flex;
+        }
+        
+        .nav-bar ul li {
+            margin: 0 20px;
+            font-family: "Poppins", sans-serif;
+            list-style: none;
+        }
+        
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        .main {
+            padding: 50px 180px;
+        }
+        
+        .side-bar {
+            position: fixed;
+            width: 180px;
+            left: 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .like,
+        .comment,
+        .share {
+            width: 55px;
+            height: 55px;
+            border: 2px solid #0e0d0d;
+            margin: 10px 0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .side-bar img {
+            width: 30px;
+            background-attachment: fixed;
+            color: black;
+        }
+        
+        .judul {
+            text-align: center;
+            font-family: "Poppins", sans-serif;
+            font-size: 15pt;
+            font-weight: 600;
+            margin-bottom: 50px;
+        }
+        
+        .image {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+        
+        .image img {
+            width: 65%;
+        }
+        
+        .main p {
+            text-align: justify;
+            font-family: "Poppins", sans-serif;
+            font-size: 15pt;
+        }
+        
+        .isi ul li {
+            font-family: "Poppins", sans-serif;
+            font-size: 15pt;
+            font-weight: 600;
+            margin-top: 25px;
+            margin-left: 20px;
+        }
+        
+        .isi p {
+            margin-top: 15px;
+        }
+        
+        .baca-juga {
+            margin-top: 40px;
+            border: 1px solid #0e0d0d;
+            height: 60px;
+            width: 80%;
+            border-radius: 30px;
+            position: relative;
+        }
+        
+        .baca-juga .name {
+            position: absolute;
+            width: 29%;
+            background: #0e0d0d;
+            height: 100%;
+            top: 0;
+            border-radius: 30px 0 0 30px;
+        }
+        
+        .baca-juga .name p {
+            display: flex;
+            justify-content: center;
+            color: #fff;
+        }
+        
+        .baca-juga .content {
+            position: absolute;
+            right: 0;
+            width: 71%;
+        }
+        
+        .baca-juga .content p {
+            display: flex;
+            justify-content: center;
+            color: #0e0d0d;
+        }
+        
+        .pengertian,
+        .fungsi,
+        .sejarah,
+        .cara-kerja,
+        .struktur {
+            margin-top: 50px;
+        }
+        
+        .penutup {
+            margin-top: 75px;
+        }
+        
+        .artikel-lainnya {
+            margin-top: 75px;
+        }
+        
+        .artikel-lainnya h3 {
+            font-size: 18pt;
+        }
+        
+        .artikel-lainnya .box {
+            display: flex;
+            margin-top: 35px;
+        }
+        
+        .artikel-lainnya .box .pertama,
+        .artikel-lainnya .box .kedua {
+            flex: 1;
+            display: flex;
+        }
+        
+        .artikel-lainnya .box img {
+            width: 130px;
+            height: 130px;
+            margin-right: 15px;
+        }
+        
+        .artikel-lainnya .box h3 {
+            font-size: 15pt;
+        }
+        
+        .artikel-lainnya .box .tanggal p {
+            font-size: 10pt;
+            margin-top: 8px;
+        }
+        
+        .artikel-lainnya .box .label {
+            background: #0e0d0d;
+            color: #fff;
+            font-size: 10pt;
+            padding: 6px;
+            border-radius: 16px;
+            display: inline-block;
+            margin-top: 8px;
+        }
+        
+        .artikel-lainnya .box .label p {
+            color: #fff;
+            font-size: 8pt;
+            margin: 0 10px;
+        }
+        
+        .pertama {
+            margin-right: 15px;
+        }
+        
+        .kedua {
+            margin-left: 15px;
+        }
+        
+        .penulis {
+            margin-top: 50px;
+        }
+        
+        .penulis h3 {
+            font-size: 15pt;
+        }
+        
+        .penulis .box {
+            height: 150px;
+            width: 40%;
+            display: flex;
+            align-items: center;
+        }
+        
+        .penulis img {
+            width: 120px;
+            height: 120px;
+            margin: 0 40px 0 0;
+        }
+        
+        .penulis p {
+            font-size: 10pt;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <h2 class="logo">Pokedo.id</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Category</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="side-bar">
+            <div class="like">
+                <img src="images/heart.svg">
+            </div>
+            <div class="comment">
+                <img src="images/comment.svg">
+            </div>
+            <div class="share">
+                <img src="images/share.svg">
+            </div>
+        </div>
+        <div class="judul">
+            <h1>KENALAN DENGAN HTML</h1>
+        </div>
+        <div class="image">
+            <img src="images/1.png" alt="freepik.com">
+        </div>
+        <div class="pembuka">
+            <p>Apa Itu HTML? Bagi kalian yang sering browsing di internet pastinya sudah tidak asing dengan HTML, tapi apa sebenarnya HTML itu?</p>
+        </div>
+        <div class="isi">
+            <div class="pengertian">
+                <h3>Pengertian</h3>
+                <p>HTML atau (HyperText Markup Language) adalah bahasa pemrograman standar yang digunakan untuk membuat sebuah halaman web yang kemudian dapat diakses untuk menampilkan berbagai informasi di dalam web browser.</p>
+                <p>HTML sendiri merupakan bagian dari Front End yang terdiri dari HTML, CSS, JavaScript yang dimana ketiganya memiliki fungsi dan peran masing-masing.</p>
+            </div>
+            <div class="baca-juga">
+                <div class="name">
+                    <p>Baca juga :</p>
+                </div>
+                <div class="content">
+                    <p>Mengenal Perbedaan Front-End dan Back-End</p>
+                </div>
+            </div>
+            <div class="fungsi">
+                <h3>Fungsi HTML</h3>
+                <ul>
+                    <li>Membuat halaman web.</li>
+                    <p>HTML merupakan struktur dasar dalam pembuatan sebuah website, karena semua elemen yang muncul pada web browser ada di dalam tag HTML.</p>
+                    <li>Menampilkan berbagai informasi di dalam sebuah browser Internet.</li>
+                    <p>Dengan memasukkan sesuatu di dalam tag HTML kita bisa menampilkan apapun ke dalam web browser, baik berupa tulisan, gambar, audio, bahkan video sekalipun.</p>
+                    <li>Membuat link menuju halaman web lain dengan kode tertentu (hypertext).</li>
+                    <p>Dengan menggunakan HTML kita bisa menautkan tulisan kita dengan seluruh website yang ada di internet, sehingga kita bisa menampilkan informasi yang beragam dari berbagai sumber yang berbeda.</p>
+                </ul>
+            </div>
+            <div class="sejarah">
+                <h3>Sejarah HTML</h3>
+                <p>HTML sudah menjadi teknologi utama web dari 1990an setelah Tim Berners-Lee, yang merupakan ahli fisika dari Lembaga Penelitian CERN, menciptakannya di tahun 1989. Tujuan awal dari pembuatan HTML adalah untuk melayani pembaca agar bisa
+                    membuka dokumen yang berformat HTML. Namun, seiring vitalnya manfaat HTML, hingga saat ini sudah ada 5 versi yang Anda kenal, seperti berikut ini:</p>
+                <ul>
+                    <li>HTML v1.0</li>
+                    <p>Versi ini dibuat pada (). Versi pertama dari HTML ini adalah pionir dari perkembangan HTML. Tidak heran jika versi ini memiliki banyak sekali kelemahan termasuk tampilannya yang masih sangat sederhana. HTML versi 1.0 ini sudah mampu
+                        mendukung meletakkan image pada dokumen tanpa adanya wrapping, heading, hypertext, paragraph, cetak tebal dan miring pada penulisan text.</p>
+                    <li>HTML v2.0</li>
+                    <p>Versi ini dibuat pada (24 November 1995). HTML versi 2.0 adalah pionir dari web interaktif seperti yang Anda temukan saat ini. Dibandingkan dengan versi pertama, struktur HTML lebih tertata rapi dan mampu menampilkan form dokumen.
+                        Dengan adanya form tersebut, Anda bisa memasukkan alamat, nama, saran dan kritik pada suatu dokumen.</p>
+                    <li>HTML v3.0</li>
+                    <p>Versi ini dibuat pada (). Jika dibandingkan dengan kedua versi HTML sebelumnya, HTML v3.0 tidak memiliki umur yang lama. Itu disebabkan karena ada versi terbaru dari versi 3, yaitu versi 3.2. Di versi 3.0, HTML sudah bisa dipergunakan
+                        untuk meletakkan tabel dan gambar. Fitur terbaru dari HTML 3.0 juga mampu untuk mendukung penggunaan rumus matematika pada dokumennya.</p>
+                    <li>HTML v3.2</li>
+                    <p>Versi ini dibuat pada (14 Januari 1996). HTML versi ini adalah pembaruan dari versi 3.0. Hingga saat ini, jenis HTML ini adalah yang paling sering dipergunakan. Versi ini dipublikasikan dan versi pertama yang dikembangkan serta distandarisasi
+                        khusus oleh W3C. Versi 3.2 ini pada awalnya disebut dengan Wilbur sebelum dikenal dengan nama HTML versi 3.2.</p>
+                    <li>HTML v4.0</li>
+                    <p>Versi ini dibuat pada (18 Desember 1977). Dibandingkan versi sebelumnya, versi ini hadir dengan banyak perubahan dari v3.2. Beberapa diantaranya ada di tabel, link, image, text, meta, form dan imagemaps.</p>
+                    <li>HTML v4.01</li>
+                    <p>Versi ini dibuat pada (5 Mei 2000). Setelah ada versi 4.0, terdapat versi 4.01 yang merupakan revisi dari versi sebelumnya. Di versi ini, ada perbaikan kesalahan minor (kecil). Dari struktur pada HTML yang ada di versi ini, membuat
+                        HTML v4.01 menjadi standarisasi elemen serta atribut script XHTML 1.0.</p>
+                    <li>HTML v5.0</li>
+                    <p>Versi ini dibuat pada (28 Oktober 2014). Bisa dikatakan, versi 5.0 dari HTML adalah versi paling canggih dan paling stabil dibandingkan versi sebelumnya. Pembaharuan ini baru diperkenalkan pada tahun 2009. Versi terbaru ini dikembangkan
+                        lagi pada tanggal 4 Maret 2010 oleh W3C dan IETF (Internet Engineering Task Force). IETF sendiri merupakan organisasi yang sudah menangani HTML sejak v2.0.</p>
+                </ul>
+            </div>
+            <div class="cara-kerja">
+                <h3>Cara Kerja HTML</h3>
+                <p>HTML dibuat dari sekumpulan baris kode yang ditulis pada sebuah text editor yang kemudian disimpan dengan ekstensi .htm atau .html. Ekstensi file ini bisa dilihat dengan menggunakan web browser apapun (seperti Google Chrome, Safari, atau
+                    Mozilla Firefox). Browser tersebut membaca file HTML dan merender kontennya sehingga user internet bisa melihat dan membacanya.</p>
+            </div>
+            <div class="baca-juga">
+                <div class="name">
+                    <p>Baca juga :</p>
+                </div>
+                <div class="content">
+                    <p>Text Editor Yang Bikin Kamu Makin Jago Coding</p>
+                </div>
+            </div>
+            <div class="struktur">
+                <h3>Contoh Struktur Dasar HTML</h3>
+                <p>Dalam penulisannya sendiri HTML disusun Oleh Tag, Atribut, dan Element.</p>
+                <p>Dan itu tadi adalah penjelasan mengenai HTML mulai dari pengertian sampai contohnya, semoga kalian paham dengan apa yang telah disampaikan di atas. Apabila ada yang masih kurang jelas kalian bisa tulis di kolom komentar.</p>
+            </div>
+        </div>
+        <div class="penutup">
+            <p>Oke sekian dulu, kalau ada kritik dan saran atau ingin request konten lain silahkan komen di bawah. Jangan lupa untuk share postingan ini agar makin banyak yang terbantu, dan kunjungi juga sosial media milik Pokedo.id.</p>
+        </div>
+        <div class="artikel-lainnya">
+            <h3>Artikel lainnya :</h3>
+            <div class="box">
+                <div class="pertama">
+                    <img src="images/2.png" alt="">
+                    <div class="text">
+                        <h3>Aplikasi Belajar Bahasa Asing Di Android</h3>
+                        <div class="tanggal">
+                            <p>30 Juni 2020</p>
+                        </div>
+                        <!-- buat label
+                        <div class="label">
+                            <p>recomendation</p>
+                        </div>
+                        -->
+                    </div>
+                </div>
+                <div class="kedua">
+                    <img src="images/3.png" alt="">
+                    <div class="text">
+                        <h3>Kenalan Dengan CSS</h3>
+                        <div class="tanggal">
+                            <p>02 Juli 2020</p>
+                        </div>
+                        <!-- buat label 
+                        <div class="label">
+                            <p>Knowledge</p>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="penulis">
+            <div class="box">
+                <img src="images/profile.png" alt="">
+                <div class="text">
+                    <h3>Kukuh Satrio</h3>
+                    <p>Halo nama saya Kukuh Satrio dan saya adalah seorang Front End Developer dan juga UI Designer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
